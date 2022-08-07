@@ -114,7 +114,7 @@ body {
 
 .cart__item--img {
     width: 100px;
-    height: 100%;
+    height: 150px;
     object-fit: cover;
 }
 

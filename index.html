@@ -39,8 +39,8 @@
             <div class="cart__container container flex__row">
                 <div class="cart__item--container flex__row">
                     <!-- flex containing checkbox cart item and del btn -->
-                    <label for="select-item" class="checkbox__container"><input type="checkbox" name="select-item"
-                            class="cart__item--select btn"></label>
+                    <label for="high-cut-bikini" class="checkbox__container"><input type="checkbox"
+                            name="high-cut-bikini" class="cart__item--select btn"></label>
                     <!-- checkbox -->
                     <div class="cart__item flex__row">
                         <!-- contains img and item-details -->
@@ -56,13 +56,15 @@
                                         class="cart__item--attr--color--red cart__item--attr--color"></span>/XS
                                 </p>
                                 <div class="inr__dcr">
-                                    <button class="inr__btn inr__dcr--btn" onclick="dcrQty()">-</button>
-                                    <input class="inr__dcr--num" type="number" value="01" min="0"
-                                        onchange="checkQty()" />
-                                    <button class="dcr__btn inr__dcr--btn" onclick="inrQty()">+</button>
+                                    <button class="inr__btn inr__dcr--btn"
+                                        onclick="updateCost('high-cut-bikini','-')">-</button>
+                                    <input class="inr__dcr--num inr__dcr--num--high-cut-bikini" type="number" value="01"
+                                        min="0" onchange="updateCost('high-cut-bikini')" />
+                                    <button class="dcr__btn inr__dcr--btn"
+                                        onclick="updateCost('high-cut-bikini','+')">+</button>
                                 </div>
                             </div>
-                            <p class="cost">$23</p>
+                            <p>$<span class="cost high-cut-bikini--cost">23</span></p>
                         </div>
                     </div>
                 </div>
@@ -72,8 +74,8 @@
             <div class="cart__container container flex__row">
                 <div class="cart__item--container flex__row">
                     <!-- flex containing checkbox cart item and del btn -->
-                    <label for="select-item" class="checkbox__container"><input name="select-item" type="checkbox"
-                            class="cart__item--select btn"></label>
+                    <label for="cut-out-monokini" class="checkbox__container"><input name="cut-out-monokini"
+                            type="checkbox" class="cart__item--select btn"></label>
                     <!-- checkbox -->
                     <div class="cart__item flex__row">
                         <!-- contains img and item-details -->
@@ -89,12 +91,15 @@
                                         class="cart__item--attr--color--sagegreen cart__item--attr--color"></span>/M
                                 </p>
                                 <div class="inr__dcr">
-                                    <button class="inr__btn inr__dcr--btn">-</button>
-                                    <input class="inr__dcr--num" type="number" value="01" />
-                                    <button class="dcr__btn inr__dcr--btn">+</button>
+                                    <button class="inr__btn inr__dcr--btn"
+                                        onclick="updateCost('cut-out-monokini','-')">-</button>
+                                    <input class="inr__dcr--num inr__dcr--num--cut-out-monokini" type="number"
+                                        value="01" onchange="updateCost('cut-out-monokini')" />
+                                    <button class="dcr__btn inr__dcr--btn"
+                                        onclick="updateCost('cut-out-monokini','+')">+</button>
                                 </div>
                             </div>
-                            <p class="cost">$25</p>
+                            <p>$<span class="cost cut-out-monokini--cost">25</span></p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +109,7 @@
             <div class="cart__container container flex__row">
                 <div class="cart__item--container flex__row">
                     <!-- flex containing checkbox cart item and del btn -->
-                    <label for="select-item" class="checkbox__container"><input type="checkbox" name="select-item"
+                    <label for="monokini" class="checkbox__container"><input type="checkbox" name="monokini"
                             class="cart__item--select btn"></label>
                     <!-- checkbox -->
                     <div class="cart__item flex__row">
@@ -121,12 +126,15 @@
                                         class="cart__item--attr--color cart__item--attr--color--blue"></span>/XS
                                 </p>
                                 <div class="inr__dcr">
-                                    <button class="inr__btn btn inr__dcr--btn">-</button>
-                                    <input class="inr__dcr--num" type="number" value="01" />
-                                    <button class="dcr__btn btn inr__dcr--btn">+</button>
+                                    <button class="inr__btn btn inr__dcr--btn"
+                                        onclick="updateCost('monokini','-')">-</button>
+                                    <input class="inr__dcr--num inr__dcr--num--monokini" type="number" value="01"
+                                        onchange="updateCost('monokini')" />
+                                    <button class="dcr__btn btn inr__dcr--btn"
+                                        onclick="updateCost('monokini','+')">+</button>
                                 </div>
                             </div>
-                            <p class="cost">$24</p>
+                            <p>$<span class="cost monokini--cost">24</span></p>
                         </div>
                     </div>
                 </div>
@@ -136,11 +144,11 @@
         <footer class="footer container">
             <div class="footer__container flex__row">
                 <div class="flex__row select__all">
-                    <input type="checkbox" class="select__all--btn btn" />
+                    <input type="checkbox" name="select-all" id="select-all-items" class="select__all--btn btn" />
                     <span>All</span>
                 </div>
                 <div class="flex__row total__amt__checkout">
-                    <p class="total__cost">$0</p>
+                    <p>$<span class="total__cost">0</span></p>
                     <button class="clk__btn btn">Checkout</button>
                 </div>
             </div>
