@@ -8,6 +8,7 @@ const allSelectItemsBtn = document.querySelectorAll(".cart__item--select");
 let result = true;
 //even if one of the other checkboxes is not selected, then the 'select all' checkbox should not be selected
 
+
 // for(e of allSelectItemsBtn){
 //   result = e.checked;
 //   //if all checked then 1, else 0
